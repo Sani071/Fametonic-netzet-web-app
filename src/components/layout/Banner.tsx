@@ -8,11 +8,11 @@ interface BannerProps {
 
 export default function Banner({ className = '' }: BannerProps) {
   return (
-    <section className={`w-full bg-black text-white ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className={`w-full bg-black text-white relative overflow-hidden ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="lg:col-span-7 space-y-8 relative z-10">
             <div className="space-y-4">
               <Typography variant="h1" font="figtree" className="text-white leading-tight text-4xl lg:text-5xl">
                 Want to Turn Social Media Into a Profitable Career?
@@ -81,23 +81,16 @@ export default function Banner({ className = '' }: BannerProps) {
           </div>
 
           {/* Right Content - Phone Mockup */}
-          <div className="hidden lg:block relative">
-            <div className="relative">
-              {/* Glowing rings background */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-96 h-96 rounded-full border-2 border-cyan-400/30 absolute animate-pulse"></div>
-                <div className="w-80 h-80 rounded-full border-2 border-pink-400/30 absolute animate-pulse" style={{animationDelay: '1s'}}></div>
-                <div className="w-64 h-64 rounded-full border-2 border-blue-400/30 absolute animate-pulse" style={{animationDelay: '2s'}}></div>
-              </div>
-              
-              {/* Mobile Banner Image */}
-              <div className="relative z-10 mx-auto">
+          <div className="lg:col-span-5 relative">
+            <div className="absolute inset-0 lg:-right-32 xl:-right-48 flex items-center justify-end">
+              {/* Mobile Banner Image - Large and Simple */}
+              <div>
                 <Image
                   src="/mobile-banner.png"
                   alt="Mobile App Interface"
-                  width={300}
-                  height={600}
-                  className="h-auto max-w-full"
+                  width={766}
+                  height={679}
+                  className="h-auto max-w-none"
                   priority
                 />
               </div>
