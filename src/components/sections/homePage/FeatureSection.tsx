@@ -8,6 +8,13 @@ interface FeatureSectionProps {
 export default function FeatureSection({
   className = "",
 }: FeatureSectionProps) {
+  const features = [
+    "Start growing your influence right away—no waiting required!",
+    "Create viral TikToks and Reels step by step with easy-to-follow lessons",
+    "Use a Personal AI Worker to boost your content",
+    "Learn from expert-led courses designed for aspiring influencers"
+  ];
+
   return (
     <div className={`space-y-8 ${className}`}>
       <div className="space-y-4">
@@ -32,50 +39,18 @@ export default function FeatureSection({
 
       {/* Features List */}
       <div className="space-y-4">
-        <div className="flex items-start space-x-3">
-          <span className="text-yellow-400 text-xl">✨</span>
-          <Typography
-            variant="body"
-            font="figtree"
-            className="text-white"
-          >
-            Start growing your influence right away—no waiting required!
-          </Typography>
-        </div>
-
-        <div className="flex items-start space-x-3">
-          <span className="text-yellow-400 text-xl">✨</span>
-          <Typography
-            variant="body"
-            font="figtree"
-            className="text-white"
-          >
-            Create viral TikToks and Reels step by step with easy-to-follow
-            lessons
-          </Typography>
-        </div>
-
-        <div className="flex items-start space-x-3">
-          <span className="text-yellow-400 text-xl">✨</span>
-          <Typography
-            variant="body"
-            font="figtree"
-            className="text-white"
-          >
-            Use a Personal AI Worker to boost your content
-          </Typography>
-        </div>
-
-        <div className="flex items-start space-x-3">
-          <span className="text-yellow-400 text-xl">✨</span>
-          <Typography
-            variant="body"
-            font="figtree"
-            className="text-white"
-          >
-            Learn from expert-led courses designed for aspiring influencers
-          </Typography>
-        </div>
+        {features.map((feature, index) => (
+          <div key={index} className="flex items-start space-x-3">
+            <span className="text-yellow-400 text-xl">✨</span>
+            <Typography
+              variant="body"
+              font="figtree"
+              className="text-white"
+            >
+              {feature}
+            </Typography>
+          </div>
+        ))}
       </div>
 
       {/* CTA Button */}
