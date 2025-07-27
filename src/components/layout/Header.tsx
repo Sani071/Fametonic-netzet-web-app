@@ -31,12 +31,12 @@ export default function Header({ className = '' }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-10">
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">
               <Typography variant="body" font="figtree" className="text-lg">
                 About us
               </Typography>
             </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">
               <Typography variant="body" font="figtree" className="text-lg">
                 Contact
               </Typography>
@@ -102,19 +102,19 @@ export default function Header({ className = '' }: HeaderProps) {
               <nav className="px-6 py-8 space-y-6">
                 <a 
                   href="#" 
-                  className="block text-gray-300 hover:text-white transition-colors py-3 border-b border-gray-800"
+                  className="block text-gray-400 hover:text-white transition-colors py-3 border-b border-gray-800"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Typography variant="body" font="figtree" className="text-xl">
+                  <Typography variant="body" font="figtree" className="text-lg">
                     About us
                   </Typography>
                 </a>
                 <a 
                   href="#" 
-                  className="block text-gray-300 hover:text-white transition-colors py-3 border-b border-gray-800"
+                  className="block text-gray-400 hover:text-white transition-colors py-3 border-b border-gray-800"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Typography variant="body" font="figtree" className="text-xl">
+                  <Typography variant="body" font="figtree" className="text-lg">
                     Contact
                   </Typography>
                 </a>

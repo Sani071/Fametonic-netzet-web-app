@@ -14,7 +14,7 @@ const variantClasses = {
   h4: 'text-xl md:text-3xl font-semibold',
   h5: 'text-lg md:text-2xl font-medium',
   h6: 'text-base md:text-xl font-medium',
-  body: 'text-sm md:text-base',
+  body: 'text-base',
   caption: 'text-xs md:text-sm text-gray-600',
 };
 

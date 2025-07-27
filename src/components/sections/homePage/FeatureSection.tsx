@@ -37,7 +37,7 @@ export default function FeatureSection({
           <Typography
             variant="body"
             font="figtree"
-            className="text-white text-lg"
+            className="text-white"
           >
             Start growing your influence right away—no waiting required!
           </Typography>
@@ -48,7 +48,7 @@ export default function FeatureSection({
           <Typography
             variant="body"
             font="figtree"
-            className="text-white text-lg"
+            className="text-white"
           >
             Create viral TikToks and Reels step by step with easy-to-follow
             lessons
@@ -60,7 +60,7 @@ export default function FeatureSection({
           <Typography
             variant="body"
             font="figtree"
-            className="text-white text-lg"
+            className="text-white"
           >
             Use a Personal AI Worker to boost your content
           </Typography>
@@ -71,7 +71,7 @@ export default function FeatureSection({
           <Typography
             variant="body"
             font="figtree"
-            className="text-white text-lg"
+            className="text-white"
           >
             Learn from expert-led courses designed for aspiring influencers
           </Typography>
@@ -110,7 +110,7 @@ export default function FeatureSection({
                 boxShadow: "2px 2px 10px 0px rgba(0, 231, 249, 1)",
                 opacity: 1,
               }}
-              className="text-white text-lg font-bold rounded-lg border-0 gap-2 sm:w-75 w-80 cursor-pointer flex items-center justify-center"
+              className="text-white text-lg font-bold rounded-lg border-0 gap-2 sm:w-75 w-80 cursor-pointer flex items-center justify-center transition-all duration-300 hover:scale-101 hover:brightness-110"
             >
               GET STARTED 
               <svg 
@@ -121,9 +121,8 @@ export default function FeatureSection({
               >
                 <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6-6 6-1.41-1.41z"/>
               </svg>
-            </Button>
-
-            <Typography
+            </Button>           
+             <Typography
               variant="caption"
               font="figtree"
               className="mt-3  text-white text-xs whitespace-nowrap text-center"
