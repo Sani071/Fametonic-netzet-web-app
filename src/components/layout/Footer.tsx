@@ -9,7 +9,7 @@ export default function Footer({ className = '' }: FooterProps) {
   return (
     <footer className={`w-full bg-gray-900 text-white ${className}`}>
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
@@ -109,7 +109,7 @@ export default function Footer({ className = '' }: FooterProps) {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <Typography variant="caption" font="urbanist" className="text-gray-400">
               © 2025 Fametonic. All rights reserved.

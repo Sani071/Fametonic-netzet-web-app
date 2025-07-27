@@ -1,11 +1,12 @@
-import { ReactNode } from 'react';
+import { ReactNode, CSSProperties } from 'react';
 
 interface ButtonProps {
   children: ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger' | 'warning';
   size?: 'sm' | 'md' | 'lg';
   font?: 'figtree' | 'urbanist';
   className?: string;
+  style?: CSSProperties;
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
@@ -16,6 +17,8 @@ const variantClasses = {
   secondary: 'bg-gray-600 text-white hover:bg-gray-700 active:bg-gray-800',
   outline: 'border-2 border-gray-300 text-gray-700 hover:bg-gray-50 active:bg-gray-100',
   ghost: 'text-gray-700 hover:bg-gray-100 active:bg-gray-200',
+  danger: 'text-white hover:opacity-90 active:opacity-80',
+  warning: 'bg-yellow-500 text-white hover:bg-yellow-600 active:bg-yellow-700',
 };
 
 const sizeClasses = {
@@ -35,15 +38,22 @@ export default function Button({
   size = 'md',
   font = 'figtree',
   className = '',
+  style,
   onClick,
   type = 'button',
   disabled = false,
 }: ButtonProps) {
+  const isDanger = variant === 'danger';
+  
   return (
     <button
       type={type}
       onClick={onClick}
       disabled={disabled}
+      style={{
+        ...(isDanger ? { backgroundColor: '#FC004E' } : {}),
+        ...style
+      }}
       className={`
         inline-flex items-center justify-center
         font-medium rounded-lg

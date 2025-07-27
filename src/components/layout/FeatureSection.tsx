@@ -1,77 +1,129 @@
-import Typography from '@/components/ui/Typography';
-import Button from '@/components/ui/Button';
+import Typography from "@/components/ui/Typography";
+import Button from "@/components/ui/Button";
 
 interface FeatureSectionProps {
   className?: string;
 }
 
-export default function FeatureSection({ className = '' }: FeatureSectionProps) {
+export default function FeatureSection({
+  className = "",
+}: FeatureSectionProps) {
   return (
     <div className={`space-y-8 ${className}`}>
       <div className="space-y-4">
-        <Typography variant="h1" font="figtree" className="text-white leading-tight text-4xl lg:text-5xl">
+        <Typography
+          variant="h1"
+          font="urbanist"
+          className="text-white text-[25px] md:text-[35px] font-extrabold md:font-bold pl-2 md:pl-0"
+        >
           Want to Turn Social Media Into a Profitable Career?
         </Typography>
-        
-        <Typography variant="h2" font="figtree" className="text-gradient-pink-cyan leading-tight text-3xl lg:text-4xl">
+
+        <div
+          className="font-urbanist text-[25px] md:text-[35px] font-extrabold md:font-bold leading-tight"
+          style={{
+            color: "#00E7F9",
+            textShadow: "0px 4px 4px rgba(252, 0, 78, 1)",
+          }}
+        >
           Discover your way to success with Fametonic:
-        </Typography>
+        </div>
       </div>
 
       {/* Features List */}
       <div className="space-y-4">
         <div className="flex items-start space-x-3">
           <span className="text-yellow-400 text-xl">✨</span>
-          <Typography variant="body" font="urbanist" className="text-white text-lg">
+          <Typography
+            variant="body"
+            font="urbanist"
+            className="text-white text-lg"
+          >
             Start growing your influence right away—no waiting required!
           </Typography>
         </div>
-        
+
         <div className="flex items-start space-x-3">
           <span className="text-yellow-400 text-xl">✨</span>
-          <Typography variant="body" font="urbanist" className="text-white text-lg">
-            Create viral TikToks and Reels step by step with easy-to-follow lessons
+          <Typography
+            variant="body"
+            font="urbanist"
+            className="text-white text-lg"
+          >
+            Create viral TikToks and Reels step by step with easy-to-follow
+            lessons
           </Typography>
         </div>
-        
+
         <div className="flex items-start space-x-3">
           <span className="text-yellow-400 text-xl">✨</span>
-          <Typography variant="body" font="urbanist" className="text-white text-lg">
+          <Typography
+            variant="body"
+            font="urbanist"
+            className="text-white text-lg"
+          >
             Use a Personal AI Worker to boost your content
           </Typography>
         </div>
-        
+
         <div className="flex items-start space-x-3">
           <span className="text-yellow-400 text-xl">✨</span>
-          <Typography variant="body" font="urbanist" className="text-white text-lg">
+          <Typography
+            variant="body"
+            font="urbanist"
+            className="text-white text-lg"
+          >
             Learn from expert-led courses designed for aspiring influencers
           </Typography>
         </div>
       </div>
 
       {/* CTA Button */}
-      <div className="pt-6">
-        <Button 
-          size="lg" 
-          font="figtree" 
-          className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 text-lg font-bold rounded-full"
-        >
-          GET STARTED ▶
-        </Button>
-        
-        <Typography variant="caption" font="urbanist" className="text-gray-400 block mt-3">
-          1-minute quiz for personalized Insights
-        </Typography>
-      </div>
+      <div className="pt-6 flex flex-col lg:flex-col">
+        {/* Footer Text */}
+        <div className="order-1 lg:order-3 pb-6 lg:pb-0 lg:pt-8 space-y-2">
+          <Typography
+            variant="caption"
+            font="urbanist"
+            className="text-[#ABABAB] font-medium text-xs"
+          >
+            By clicking &quot;Get Started&quot;, you agree with Terms and
+            Conditions, Privacy Policy, Subscription Terms
+          </Typography>
+          <Typography
+            variant="caption"
+            font="urbanist"
+            className="text-[#ABABAB]"
+          >
+            Fametonic 2025 ©All Rights Reserved.
+          </Typography>
+        </div>
 
-      {/* Footer Text */}
-      <div className="pt-8 space-y-2">
-        <Typography variant="caption" font="urbanist" className="text-gray-400">
-          By clicking &quot;Get Started&quot;, you agree with Terms and Conditions, Privacy Policy, Subscription Terms
-        </Typography>
-        <Typography variant="caption" font="urbanist" className="text-gray-400">
-          Fametonic 2025 ©All Rights Reserved.
-        </Typography>
+        {/* Button */}
+        <div className="order-2 inline-block">
+          <div className="flex flex-col">
+            <Button
+              size="lg"
+              font="figtree"
+              variant="danger"
+              style={{
+                boxShadow: "2px 2px 10px 0px rgba(0, 231, 249, 1)",
+                opacity: 1,
+              }}
+              className="text-white text-lg font-bold rounded-lg border-0 gap-2 sm:w-100 cursor-pointer"
+            >
+              GET STARTED &gt;
+            </Button>
+
+            <Typography
+              variant="caption"
+              font="urbanist"
+              className="mt-3  text-white text-xs whitespace-nowrap ml-[5rem]"
+            >
+              1-minute quiz for personalized Insights
+            </Typography>
+          </div>
+        </div>
       </div>
     </div>
   );
