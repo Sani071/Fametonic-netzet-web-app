@@ -6,7 +6,7 @@ interface BannerProps {
 
 export default function Banner({ className = '' }: BannerProps) {
   return (
-    <div className={`grid-item order-1 lg:order-2 relative lg:absolute lg:inset-0 lg:left-[58%] lg:scale-[1.8] lg:top-[9rem] ${className}`}>
+    <div className={`grid-item order-1 lg:order-2 relative lg:absolute lg:inset-0 lg:left-[58%] lg:scale-[1.7] lg:top-[6rem] ${className}`}>
       <Image
         src="/mobile-banner.png"
         alt="Mobile App Interface"
