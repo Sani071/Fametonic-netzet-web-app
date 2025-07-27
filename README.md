@@ -46,6 +46,7 @@ Fametonic is a modern, responsive web application designed to help aspiring infl
 | **Tailwind CSS** | 4.0 | Utility-First Styling |
 | **Urbanist Font** | Latest | Primary Typography |
 | **Figtree Font** | Latest | Secondary Typography |
+| **Playwright** | Latest | End-to-End Testing |
 
 ---
 
@@ -61,8 +62,8 @@ Fametonic is a modern, responsive web application designed to help aspiring infl
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/sani071/netzet-task.git
-   cd netzet-task
+   git clone https://github.com/Sani071/Fametonic-netzet-web-app.git
+   cd Fametonic-netzet-web-app
    ```
 
 2. **Install dependencies**
@@ -113,10 +114,13 @@ netzet-task/
 │       └── 📁 ui/                # Reusable UI components
 │           ├── 🧩 Button.tsx     # Custom button component
 │           └── 🧩 Typography.tsx # Typography system
+├── 📁 tests/                     # Playwright test files
+│   └── 🧪 home.spec.ts           # Home page E2E tests
 ├── 📁 .vscode/                   # VS Code settings
 │   └── ⚙️ tasks.json             # Build tasks configuration
 ├── ⚙️ eslint.config.mjs          # ESLint configuration
 ├── ⚙️ next.config.ts             # Next.js configuration
+├── 🧪 playwright.config.ts       # Playwright test configuration
 ├── 🎨 postcss.config.mjs         # PostCSS configuration
 ├── 📝 tsconfig.json              # TypeScript configuration
 ├── 📦 package.json               # Dependencies & scripts
@@ -143,7 +147,6 @@ netzet-task/
 
 - **Primary Font**: Urbanist (700, 800 weights)
 - **Secondary Font**: Figtree (400, 500, 600 weights)
-- **Custom Utilities**: `.text-25` for 25px font size
 
 ### 🧩 Component Architecture
 
@@ -186,6 +189,73 @@ netzet-task/
 
 ---
 
+## 🧪 Testing
+
+### End-to-End Testing with Playwright
+
+This project uses **Playwright** for comprehensive end-to-end testing across multiple browsers and devices.
+
+#### 🚀 Quick Test Commands
+
+```bash
+npm run test        # Run all tests
+npm run test:head   # Run tests in headed mode (visible browser)
+```
+
+#### 🎯 Test Coverage
+
+- **Home Page Functionality**: Verifies main heading and CTA button visibility
+- **Cross-Browser Testing**: Chrome, Firefox, Safari (WebKit)
+- **Mobile Responsiveness**: Tests on mobile viewports (Pixel 5, iPhone 12)
+- **Automated CI/CD**: Ready for continuous integration
+
+#### 📋 Test Structure
+
+```
+tests/
+└── home.spec.ts     # Home page E2E tests
+    ├── Main heading verification
+    ├── CTA button presence
+    └── Responsive behavior
+```
+
+#### 🛠️ Playwright Configuration
+
+- **Multi-Browser Support**: Chromium, Firefox, WebKit
+- **Mobile Testing**: Pixel 5 and iPhone 12 viewports
+- **Auto Server**: Automatically starts dev server for testing
+- **HTML Reports**: Detailed test reports with screenshots
+- **Retry Logic**: Automatic retries for flaky tests
+
+#### 🔍 Test Examples
+
+```typescript
+// Home page test example
+test('homepage has correct heading and CTA button', async ({ page }) => {
+  await page.goto('/');
+  
+  // Verify main heading
+  await expect(page.getByRole('heading', { 
+    name: 'Turn Social Media Into a Profitable Career' 
+  })).toBeVisible();
+  
+  // Verify CTA button
+  await expect(page.getByRole('button', { 
+    name: 'Get Started' 
+  })).toBeVisible();
+});
+```
+
+#### 📊 Browser Matrix
+
+| Browser | Desktop | Mobile |
+|---------|---------|--------|
+| Chrome | ✅ | ✅ (Pixel 5) |
+| Firefox | ✅ | ❌ |
+| Safari | ✅ | ✅ (iPhone 12) |
+
+---
+
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
@@ -213,8 +283,13 @@ npm run build        # Build for production
 npm run start        # Start production server
 npm run lint         # Run ESLint
 
+# Testing
+npm run test         # Run Playwright E2E tests
+npm run test:ui      # Run tests with UI mode (visual debugging)
+npm run test:head    # Run tests in headed mode (visible browser)
+
 # Type Checking
-npm run type-check   # Check TypeScript types
+npm run type-check   # Check TypeScript types (if configured)
 ```
 
 ---
@@ -239,6 +314,8 @@ We welcome contributions! Here's how you can help:
 - Test **responsive behavior** across multiple devices and screen sizes
 - Use **barrel exports** for cleaner imports when applicable
 - Implement **accessibility** features (ARIA labels, semantic HTML)
+- Write **E2E tests** for critical user journeys using Playwright
+- Ensure **cross-browser compatibility** through automated testing
 
 #### Component Development:
 ```typescript
@@ -283,6 +360,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 - **Next.js Team** for the amazing framework
 - **Tailwind CSS** for the utility-first approach
+- **Playwright** for reliable cross-browser testing
 - **Vercel** for seamless deployment
 - **Google Fonts** for beautiful typography
 

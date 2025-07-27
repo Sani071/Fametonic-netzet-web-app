@@ -13,6 +13,12 @@
 # testing
 /coverage
 
+# playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
 # next.js
 /.next/
 /out/
@@ -23,6 +29,18 @@
 # misc
 .DS_Store
 *.pem
+
+# IDE and editor files
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
 # debug
 npm-debug.log*
@@ -39,3 +57,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# temporary files
+*.tmp
+*.temp
+.cache/
+
+# logs
+*.log
