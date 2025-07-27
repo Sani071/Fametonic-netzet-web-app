@@ -36,7 +36,7 @@ export default function FeatureSection({
           <span className="text-yellow-400 text-xl">✨</span>
           <Typography
             variant="body"
-            font="urbanist"
+            font="figtree"
             className="text-white text-lg"
           >
             Start growing your influence right away—no waiting required!
@@ -47,7 +47,7 @@ export default function FeatureSection({
           <span className="text-yellow-400 text-xl">✨</span>
           <Typography
             variant="body"
-            font="urbanist"
+            font="figtree"
             className="text-white text-lg"
           >
             Create viral TikToks and Reels step by step with easy-to-follow
@@ -59,7 +59,7 @@ export default function FeatureSection({
           <span className="text-yellow-400 text-xl">✨</span>
           <Typography
             variant="body"
-            font="urbanist"
+            font="figtree"
             className="text-white text-lg"
           >
             Use a Personal AI Worker to boost your content
@@ -70,7 +70,7 @@ export default function FeatureSection({
           <span className="text-yellow-400 text-xl">✨</span>
           <Typography
             variant="body"
-            font="urbanist"
+            font="figtree"
             className="text-white text-lg"
           >
             Learn from expert-led courses designed for aspiring influencers
@@ -84,7 +84,7 @@ export default function FeatureSection({
         <div className="order-1 lg:order-3 pb-6 lg:pb-0 lg:pt-8 space-x-5 md:space-x-0 text-center md:text-left space-y-2">
           <Typography
             variant="caption"
-            font="urbanist"
+            font="figtree"
             className="text-[#ABABAB] font-medium text-xs"
           >
             By clicking &quot;Get Started&quot;, you agree with Terms and
@@ -92,7 +92,7 @@ export default function FeatureSection({
           </Typography>
           <Typography
             variant="caption"
-            font="urbanist"
+            font="figtree"
             className="text-[#ABABAB]"
           >
             Fametonic 2025 ©All Rights Reserved.
@@ -125,7 +125,7 @@ export default function FeatureSection({
 
             <Typography
               variant="caption"
-              font="urbanist"
+              font="figtree"
               className="mt-3  text-white text-xs whitespace-nowrap text-center"
             >
               1-minute quiz for personalized Insights
