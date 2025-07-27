@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #000000;
+  --foreground: #ffffff;
+  --font-figtree: var(--font-figtree);
+  --font-urbanist: var(--font-urbanist);
+  --primary-cyan: #00bcd4;
+  --primary-pink: #e91e63;
+  --gradient-pink: linear-gradient(90deg, #e91e63 0%, #00bcd4 100%);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-figtree), Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for desktop (1440px) and mobile (390px) responsive design */
+.container-desktop {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 805px;
+}
+
+.container-mobile {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  min-height: 1007px;
+}
+
+/* Font utilities */
+.font-figtree {
+  font-family: var(--font-figtree), sans-serif;
+}
+
+.font-urbanist {
+  font-family: var(--font-urbanist), sans-serif;
+}
+
+/* Gradient utilities */
+.gradient-pink-cyan {
+  background: linear-gradient(
+    90deg,
+    #e91e63 0%,
+    #8e24aa 25%,
+    #3f51b5 50%,
+    #00bcd4 75%,
+    #4caf50 100%
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.text-gradient-pink-cyan {
+  background: linear-gradient(90deg, #e91e63 0%, #00bcd4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
