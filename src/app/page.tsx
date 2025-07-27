@@ -1,5 +1,5 @@
-import FeatureSection from '@/components/HomePage/FeatureSection';
-import Banner from '@/components/HomePage/Banner';
+import Banner from "@/components/sections/homePage/Banner";
+import FeatureSection from "@/components/sections/homePage/FeatureSection";
 
 interface HomePageProps {
   className?: string;

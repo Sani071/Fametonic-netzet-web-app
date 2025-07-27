@@ -29,6 +29,10 @@ Fametonic is a modern, responsive web application designed to help aspiring infl
 - 🎓 **Expert-Led Courses**: Learn from courses designed for aspiring influencers
 - 📊 **Personalized Insights**: 1-minute quiz for tailored recommendations
 - 🎨 **Modern UI/UX**: Beautiful, responsive design with custom animations
+- 🚀 **Performance Optimized**: Built with Next.js 15 App Router for lightning-fast loading
+- 📱 **Mobile-First Design**: Responsive across all devices with Tailwind CSS
+- 🎭 **Custom Components**: Reusable UI components with TypeScript support
+- 🎨 **Design System**: Consistent typography and color palette
 
 ---
 
@@ -85,29 +89,38 @@ Fametonic is a modern, responsive web application designed to help aspiring infl
 ```
 netzet-task/
 ├── 📁 public/                    # Static assets
-│   ├── 🖼️ log-fametonic.png      # Logo
-│   └── 🖼️ mobile-banner.png      # Banner image
+│   ├── 🖼️ log-fametonic.png      # Company logo
+│   ├── 🖼️ mobile-banner.png      # Hero banner image
+│   ├── 🖼️ next.svg              # Next.js logo
+│   ├── 🖼️ vercel.svg            # Vercel logo
+│   └── 🖼️ window.svg            # Window icon
 ├── 📁 src/
-│   ├── 📁 app/                   # Next.js App Router
-│   │   ├── 🎨 globals.css        # Global styles
-│   │   ├── 📄 layout.tsx         # Root layout
-│   │   └── 📄 page.tsx           # Home page
-│   ├── 📁 components/
-│   │   ├── 📁 layout/            # Layout components
-│   │   │   ├── 🧩 Header.tsx     # Navigation header
-│   │   │   ├── 🧩 Footer.tsx     # Footer with terms
-│   │   │   ├── 🧩 Banner.tsx     # Hero banner
-│   │   │   └── 🧩 FeatureSection.tsx # Main content
-│   │   ├── 📁 ui/                # Reusable UI components
-│   │   │   ├── 🧩 Button.tsx     # Custom button
-│   │   │   └── 🧩 Typography.tsx # Typography system
-│   │   └── 📁 pages/             # Page components
-│   │       └── 🧩 HomePage.tsx   # Home page layout
-│   └── 📁 types/                 # TypeScript definitions
+│   ├── 📁 app/                   # Next.js 15 App Router
+│   │   ├── 🎨 globals.css        # Global styles & Tailwind
+│   │   ├── 📄 layout.tsx         # Root layout component
+│   │   ├── 📄 page.tsx           # Home page
+│   │   └── 🖼️ favicon.ico        # Site favicon
+│   └── 📁 components/            # React components
+│       ├── 📁 common/            # Shared components
+│       │   └── 🧩 TopPromoBanner.tsx # Promotional banner
+│       ├── 📁 layout/            # Layout components
+│       │   ├── 🧩 AppLayout.tsx  # Main app layout wrapper
+│       │   └── 🧩 Header.tsx     # Navigation header
+│       ├── 📁 sections/          # Page sections
+│       │   └── 📁 homePage/      # Home page specific sections
+│       │       ├── 🧩 Banner.tsx     # Hero banner section
+│       │       └── 🧩 FeatureSection.tsx # Features & CTA section
+│       └── 📁 ui/                # Reusable UI components
+│           ├── 🧩 Button.tsx     # Custom button component
+│           └── 🧩 Typography.tsx # Typography system
+├── 📁 .vscode/                   # VS Code settings
+│   └── ⚙️ tasks.json             # Build tasks configuration
+├── ⚙️ eslint.config.mjs          # ESLint configuration
 ├── ⚙️ next.config.ts             # Next.js configuration
 ├── 🎨 postcss.config.mjs         # PostCSS configuration
 ├── 📝 tsconfig.json              # TypeScript configuration
-└── 📦 package.json               # Dependencies
+├── 📦 package.json               # Dependencies & scripts
+└── 📝 README.md                  # Project documentation
 ```
 
 ---
@@ -132,12 +145,24 @@ netzet-task/
 - **Secondary Font**: Figtree (400, 500, 600 weights)
 - **Custom Utilities**: `.text-25` for 25px font size
 
-### 🧩 Components
+### 🧩 Component Architecture
 
-- **Responsive Design**: Mobile-first approach
-- **Custom Button Variants**: Primary, secondary, outline, ghost, danger, warning
-- **Typography System**: Consistent text styling across the app
-- **Flexible Layout**: CSS Grid and Flexbox for responsive layouts
+- **App Router Structure**: Leverages Next.js 15 App Router for optimal performance
+- **Modular Components**: Organized by function and reusability
+- **Layout System**: Centralized layout components for consistent UI
+- **Section-Based**: Page sections organized by feature areas
+- **UI Components**: Reusable design system components
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+
+#### Component Categories:
+
+| Category | Purpose | Examples |
+|----------|---------|----------|
+| **`/app`** | Next.js App Router pages | `page.tsx`, `layout.tsx` |
+| **`/common`** | Shared components | `TopPromoBanner` |
+| **`/layout`** | Layout & navigation | `Header`, `AppLayout` |
+| **`/sections`** | Page sections | `Banner`, `FeatureSection` |
+| **`/ui`** | Design system | `Button`, `Typography` |
 
 ---
 
@@ -206,11 +231,37 @@ We welcome contributions! Here's how you can help:
 
 ### 📋 Development Guidelines
 
-- Follow **TypeScript** best practices
-- Use **Tailwind CSS** for styling
-- Maintain **responsive design** principles
-- Write **meaningful commit messages**
-- Test on **multiple devices**
+- Follow **TypeScript** best practices with strict type checking
+- Use **Tailwind CSS** utility classes for consistent styling
+- Maintain **component modularity** with clear separation of concerns
+- Organize components by **functionality** (`ui/`, `layout/`, `sections/`)
+- Write **meaningful commit messages** following conventional commits
+- Test **responsive behavior** across multiple devices and screen sizes
+- Use **barrel exports** for cleaner imports when applicable
+- Implement **accessibility** features (ARIA labels, semantic HTML)
+
+#### Component Development:
+```typescript
+// Example component structure
+import { ComponentProps } from '@/types'
+
+interface MyComponentProps extends ComponentProps {
+  title: string
+  variant?: 'primary' | 'secondary'
+}
+
+export default function MyComponent({ 
+  title, 
+  variant = 'primary',
+  className = '' 
+}: MyComponentProps) {
+  return (
+    <div className={`base-styles ${variant} ${className}`}>
+      {title}
+    </div>
+  )
+}
+```
 
 ---
 

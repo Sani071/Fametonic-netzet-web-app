@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import Header from '../common/Header';
+import Header from './Header';
 import TopPromoBanner from '../common/TopPromoBanner';
 
 interface MainLayoutProps {
