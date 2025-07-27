@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import TopPromoBanner from './TopPromoBanner';
-import Header from './Header';
+import TopPromoBanner from '../common/TopPromoBanner';
+import Header from '../common/Header';
 
 interface MainLayoutProps {
   children: ReactNode;

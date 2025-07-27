@@ -41,7 +41,6 @@ body {
 .font-urbanist {
   font-family: var(--font-urbanist), sans-serif;
 }
-
 /* Gradient utilities */
 .gradient-pink-cyan {
   background: linear-gradient(90deg, #e91e63 0%, #00bcd4 100%);

@@ -79,9 +79,9 @@ export default function FeatureSection({
       </div>
 
       {/* CTA Button */}
-      <div className="pt-6 flex flex-col lg:flex-col">
+      <div className="pt-6 flex flex-col lg:flex-col items-center lg:items-start">
         {/* Footer Text */}
-        <div className="order-1 lg:order-3 pb-6 lg:pb-0 lg:pt-8 space-y-2">
+        <div className="order-1 lg:order-3 pb-6 lg:pb-0 lg:pt-8 space-x-5 md:space-x-0 text-center md:text-left space-y-2">
           <Typography
             variant="caption"
             font="urbanist"
@@ -110,7 +110,7 @@ export default function FeatureSection({
                 boxShadow: "2px 2px 10px 0px rgba(0, 231, 249, 1)",
                 opacity: 1,
               }}
-              className="text-white text-lg font-bold rounded-lg border-0 gap-2 sm:w-100 cursor-pointer"
+              className="text-white text-lg font-bold rounded-lg border-0 gap-2 sm:w-75 w-80 cursor-pointer"
             >
               GET STARTED &gt;
             </Button>
@@ -118,7 +118,7 @@ export default function FeatureSection({
             <Typography
               variant="caption"
               font="urbanist"
-              className="mt-3  text-white text-xs whitespace-nowrap ml-[5rem]"
+              className="mt-3  text-white text-xs whitespace-nowrap text-center"
             >
               1-minute quiz for personalized Insights
             </Typography>
