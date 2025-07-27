@@ -9,10 +9,13 @@ interface BannerProps {
 export default function Banner({ className = '' }: BannerProps) {
   return (
     <section className={`w-full bg-black text-white relative overflow-hidden ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Content */}
-          <div className="lg:col-span-7 space-y-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        
+        {/* Simple 2-Section Grid with Order Control - 50/50 Split */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 relative">
+
+          {/* Text Content Section */}
+          <div className="grid-item space-y-8 order-2 lg:order-1 relative z-20">
             <div className="space-y-4">
               <Typography variant="h1" font="figtree" className="text-white leading-tight text-4xl lg:text-5xl">
                 Want to Turn Social Media Into a Profitable Career?
@@ -80,22 +83,18 @@ export default function Banner({ className = '' }: BannerProps) {
             </div>
           </div>
 
-          {/* Right Content - Phone Mockup */}
-          <div className="lg:col-span-5 relative">
-            <div className="absolute inset-0 lg:-right-32 xl:-right-48 flex items-center justify-end">
-              {/* Mobile Banner Image - Large and Simple */}
-              <div>
-                <Image
-                  src="/mobile-banner.png"
-                  alt="Mobile App Interface"
-                  width={766}
-                  height={679}
-                  className="h-auto max-w-none"
-                  priority
-                />
-              </div>
-            </div>
+          {/* Image Section */}
+          <div className="grid-item order-1 lg:order-2 relative lg:absolute lg:inset-0 lg:left-3/7 z-10">
+              <Image
+                src="/mobile-banner.png"
+                alt="Mobile App Interface"
+                width={769}
+                height={600}
+                className="h-auto max-w-full"
+                priority
+              />
           </div>
+
         </div>
       </div>
     </section>
