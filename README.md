@@ -11,7 +11,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
-[🌟 Live Demo](https://your-demo-url.vercel.app) • [📖 Documentation](#documentation) • [🐛 Report Bug](https://github.com/sani071/netzet-task/issues) • [✨ Request Feature](https://github.com/sani071/netzet-task/issues)
+[🌟 Live Demo](https://fametonic-web.netlify.app/p) • [📖 Documentation](#documentation) • [🐛 Report Bug](https://github.com/Sani071/Fametonic-netzet-web-app/issues) • [✨ Request Feature](https://github.com/Sani071/Fametonic-netzet-web-app/issues)
 
 </div>
 
@@ -352,7 +352,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **Sani071**
 - GitHub: [@sani071](https://github.com/sani071)
-- Project: [netzet-task](https://github.com/sani071/netzet-task)
+- Project: [netzet-task](https://github.com/Sani071/Fametonic-netzet-web-app)
 
 ---
 
