@@ -110,9 +110,17 @@ export default function FeatureSection({
                 boxShadow: "2px 2px 10px 0px rgba(0, 231, 249, 1)",
                 opacity: 1,
               }}
-              className="text-white text-lg font-bold rounded-lg border-0 gap-2 sm:w-75 w-80 cursor-pointer"
+              className="text-white text-lg font-bold rounded-lg border-0 gap-2 sm:w-75 w-80 cursor-pointer flex items-center justify-center"
             >
-              GET STARTED &gt;
+              GET STARTED 
+              <svg 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="currentColor" 
+              >
+                <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6-6 6-1.41-1.41z"/>
+              </svg>
             </Button>
 
             <Typography
