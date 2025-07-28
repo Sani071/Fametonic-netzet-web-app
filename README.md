@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Fametonic Logo](public/log-fametonic.png)
+![Fametonic Logo](public/logo-fametonic.png)
 
 **Turn Social Media Into a Profitable Career**
 
