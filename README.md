@@ -247,8 +247,8 @@ test('homepage has correct heading and CTA button', async ({ page }) => {
 
 | Browser | Desktop | Mobile |
 |---------|---------|--------|
-| Chrome | ✅ | ✅ (Pixel 5) |
-| Firefox | ✅ | ❌ |
+| Chrome | ✅ | ✅ (Android) |
+| Firefox | ✅ | (Android) |
 | Safari | ✅ | ✅ (iPhone 12) |
 
 ---
