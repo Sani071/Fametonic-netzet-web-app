@@ -51,7 +51,7 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
       style={{
-        ...(isDanger ? { backgroundColor: '#FC004E' } : {}),
+        ...(isDanger ? { backgroundColor: 'var(--primary-red)' } : {}),
         ...style
       }}
       className={`

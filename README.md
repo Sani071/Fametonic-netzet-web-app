@@ -136,11 +136,8 @@ netzet-task/
 ```css
 /* Primary Colors */
 --primary-cyan: #00E7F9        /* Bright cyan for highlights */
---primary-pink: #FC004E        /* Vibrant pink for CTAs */
+--primary-red: #FC004E        /* Vibrant red for CTAs */
 --text-gray: #ABABAB           /* Subtle gray for secondary text */
-
-/* Gradients */
---gradient-pink-cyan: linear-gradient(90deg, #FC004E 0%, #00E7F9 100%);
 ```
 
 ### 📝 Typography

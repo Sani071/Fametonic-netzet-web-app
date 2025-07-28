@@ -27,7 +27,7 @@ export default function FeatureSection({
         </Typography>
 
         <div
-          className="font-urbanist text-[25px] md:text-[35px] font-extrabold md:font-bold leading-tight text-[#00E7F9]"
+          className="font-urbanist text-[25px] md:text-[35px] font-extrabold md:font-bold leading-tight text-primary-cyan"
           style={{
             textShadow: "0px 4px 4px rgba(252, 0, 78, 1)",
           }}
@@ -59,7 +59,7 @@ export default function FeatureSection({
           <Typography
             variant="caption"
             font="figtree"
-            className="text-[#ABABAB] font-medium text-xs"
+            className="font-medium text-xs text-gray-secondary"
           >
             By clicking &quot;Get Started&quot;, you agree with Terms and
             Conditions, Privacy Policy, Subscription Terms
@@ -67,7 +67,7 @@ export default function FeatureSection({
           <Typography
             variant="caption"
             font="figtree"
-            className="text-[#ABABAB]"
+            className="text-gray-secondary"
           >
             Fametonic 2025 ©All Rights Reserved.
           </Typography>

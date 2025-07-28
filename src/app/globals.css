@@ -5,9 +5,10 @@
   --foreground: #ffffff;
   --font-figtree: var(--font-figtree);
   --font-urbanist: var(--font-urbanist);
-  --primary-cyan: #00bcd4;
-  --primary-pink: #e91e63;
-  --gradient-pink: linear-gradient(90deg, #e91e63 0%, #00bcd4 100%);
+  --primary-cyan: #00e7f9; /* Bright cyan for highlights */
+  --primary-red: #fc004e; /* Vibrant red for CTAs */
+  --text-gray: #ababab; /* Subtle gray for secondary text */
+  --gradient-pink: linear-gradient(90deg, #fc004e 0%, #00e7f9 100%);
 }
 
 body {
@@ -43,12 +44,25 @@ body {
 }
 /* Gradient utilities */
 .gradient-pink-cyan {
-  background: linear-gradient(90deg, #e91e63 0%, #00bcd4 100%);
+  background: var(--gradient-pink);
 }
 
 .text-gradient-pink-cyan {
-  background: linear-gradient(90deg, #e91e63 0%, #00bcd4 100%);
+  background: var(--gradient-pink);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Color utilities */
+.text-primary-cyan {
+  color: var(--primary-cyan);
+}
+
+.text-primary-pink {
+  color: var(--primary-red);
+}
+
+.text-gray-secondary {
+  color: var(--text-gray);
 }
