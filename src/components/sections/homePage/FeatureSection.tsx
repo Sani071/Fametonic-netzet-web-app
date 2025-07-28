@@ -21,7 +21,7 @@ export default function FeatureSection({
         <Typography
           variant="h1"
           font="urbanist"
-          className="text-white text-[25px] md:text-[35px] font-extrabold md:font-bold pl-2 md:pl-0"
+          className="text-white text-[25px] md:text-[35px] font-extrabold md:font-bold text-center sm:text-left"
         >
           Want to Turn Social Media Into a Profitable Career?
         </Typography>
