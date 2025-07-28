@@ -11,7 +11,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
-[🌟 Live Demo](https://fametonic-web-443.netlify.app/p) • [📖 Documentation](#documentation) • [🐛 Report Bug](https://github.com/Sani071/Fametonic-netzet-web-app/issues) • [✨ Request Feature](https://github.com/Sani071/Fametonic-netzet-web-app/issues)
+[🚀 Live Demo](https://fametonic-web-443.netlify.app) • [🔗 Backup Demo](https://famotic-web-static.netlify.app) • [📖 Documentation](#https://github.com/Sani071/Fametonic-netzet-web-app/blob/main/README.md) • [🐛 Report Bug](https://github.com/Sani071/Fametonic-netzet-web-app/issues) • [✨ Request Feature](https://github.com/Sani071/Fametonic-netzet-web-app/issues)
 
 </div>
 

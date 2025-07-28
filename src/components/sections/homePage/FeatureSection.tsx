@@ -16,8 +16,8 @@ export default function FeatureSection({
   ];
 
   return (
-    <div className={`space-y-8 ${className}`}>
-      <div className="space-y-4">
+    <div className={`space-y-8  pb-10 lg:pb-20 ${className}`}>
+      <div className="space-y-1">
         <Typography
           variant="h1"
           font="urbanist"
@@ -27,9 +27,8 @@ export default function FeatureSection({
         </Typography>
 
         <div
-          className="font-urbanist text-[25px] md:text-[35px] font-extrabold md:font-bold leading-tight"
+          className="font-urbanist text-[25px] md:text-[35px] font-extrabold md:font-bold leading-tight text-[#00E7F9]"
           style={{
-            color: "#00E7F9",
             textShadow: "0px 4px 4px rgba(252, 0, 78, 1)",
           }}
         >
@@ -38,14 +37,14 @@ export default function FeatureSection({
       </div>
 
       {/* Features List */}
-      <div className="space-y-4">
+      <div className="space-y-2">
         {features.map((feature, index) => (
           <div key={index} className="flex items-start space-x-3">
             <span className="text-yellow-400 text-xl">✨</span>
             <Typography
               variant="body"
               font="figtree"
-              className="text-white"
+              className="text-white font-[600]"
             >
               {feature}
             </Typography>

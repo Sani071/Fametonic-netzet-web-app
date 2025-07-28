@@ -1,4 +1,5 @@
-"use client";import Typography from '@/components/ui/Typography';
+"use client";
+import Typography from '@/components/ui/Typography';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -20,7 +21,7 @@ export default function Header({ className = '' }: HeaderProps) {
           {/* Logo */}
           <div className="flex items-center">
             <Image
-              src="/log-fametonic.png"
+              src="/logo-fametonic.png"
               alt="Fametonic Logo"
               width={150}
               height={40}
@@ -80,7 +81,7 @@ export default function Header({ className = '' }: HeaderProps) {
               <div className="flex justify-between items-center p-6 border-b border-gray-700">
                 <div className="flex items-center">
                   <Image
-                    src="/log-fametonic.png"
+                    src="/logo-fametonic.png"
                     alt="Fametonic Logo"
                     width={120}
                     height={32}
